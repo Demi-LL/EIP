@@ -1,5 +1,7 @@
 # ERC20
+同質化 token 的公版合約
 
+___
 ## Functions
 
 ### totalSupply() -> uint256
@@ -20,6 +22,7 @@
 ### transferFrom(<font color="grey">from, to, amount</font>) -> bool
 - 從 <font color="grey">__from__</font> 帳戶中轉移 <font color="grey">__amount__</font> 個 token 到 <font color="grey">__to__</font> 帳戶中
 
+___
 ## Events
 
 ### Transfer(<font color="grey">from, to, value</font>)
@@ -28,5 +31,6 @@
 ### Approval(<font color="grey">owner, spender, value</font>)
 - 紀錄授權第三方帳戶操作 token 資訊
 
+___
 ## References
 - [openzeppelin](https://docs.openzeppelin.com/contracts/4.x/api/token/erc20#IERC20)
