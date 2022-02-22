@@ -29,8 +29,8 @@ ___
 - 編號為 <font color="grey">tokenId</font> 的 NFT 目前授權給哪個帳戶操作
 
 ### setApprovalForAll(<font color="grey">address operator, bool _approved</font>)
-- 賦予 / 取消呼叫合約的帳戶授權，操作所有屬於 <font color="grey">operator</font> 帳戶的 NFT
-- <font color="grey">_approved</font> 控制授權 / 取消授權
+- 賦予 / 取消 <font color="grey">operator</font> 帳戶授權，操作所有屬於 <font color="grey">呼叫合約帳戶</font> 的 NFT
+- <font color="grey">_approved</font> 控制賦予 / 取消授權
 - 記錄 ApprovalForAll 事件
 
 ### isApprovedForAll(<font color="grey">owner, operator</font>) -> bool
@@ -51,7 +51,7 @@ ___
 - 紀錄授權第三方帳戶操作特定 NFT 資訊
 
 ### ApprovalForAll(<font color="grey">owner, operator, approved</font>)
-- 紀錄授權第三方帳戶操作所有擁有的 NFT 資訊
+- 紀錄賦予 / 取消第三方帳戶操作所有擁有的 NFT 資訊
 
 ___
 ## References
