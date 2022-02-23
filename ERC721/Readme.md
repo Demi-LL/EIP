@@ -8,37 +8,37 @@ ___
 - 特定地址下擁有多少個 NFT
 
 ### ownerOf(<font color="grey">tokenId</font>)-> address
-- 查詢編號為 <font color="grey">tokenId</font> 的 NFT 屬於哪個帳戶
+- 查詢編號為 <font color="grey">__tokenId__</font> 的 NFT 屬於哪個帳戶
 
 ### safeTransferFrom(<font color="grey">from, to, tokenId</font>)
-- 從 <font color="grey">from</font> 帳戶將編號為 <font color="grey">tokenId</font> 的 NFT 轉移到 <font color="grey">to</font> 帳戶中
-- 會檢查 <font color="grey">to</font> 帳戶是否允許 ERC721 協議，避免 NFT 永遠遺失
+- 從 <font color="grey">__from__</font> 帳戶將編號為 <font color="grey">__tokenId__</font> 的 NFT 轉移到 <font color="grey">__to__</font> 帳戶中
+- 會檢查 <font color="grey">__to__</font> 帳戶是否允許 ERC721 協議，避免 NFT 永遠遺失
 - 記錄 Transfer 事件
 
 ### transferFrom(<font color="grey">from, to, tokenId</font>)
-- 從 <font color="grey">from</font> 帳戶將編號為 <font color="grey">tokenId</font> 的 NFT 轉移到 <font color="grey">to</font> 帳戶中
+- 從 <font color="grey">__from__</font> 帳戶將編號為 <font color="grey">__tokenId__</font> 的 NFT 轉移到 <font color="grey">__to__</font> 帳戶中
 - 記錄 Transfer 事件
 
 ### approve(<font color="grey">to, tokenId</font>)
-- 授權 <font color="grey">to</font> 帳戶操作編號為 <font color="grey">tokenId</font> 的 NFT 的權限
+- 授權 <font color="grey">__to__</font> 帳戶操作編號為 <font color="grey">__tokenId__</font> 的 NFT 的權限
 - 每個 NFT 同時只能被授權給 1 個帳戶
 - 當 NFT 轉移時，需要自動清空先前所有的授權
 - 記錄 Approval 事件
 
 ### getApproved(<font color="grey">tokenId</font>) -> address
-- 編號為 <font color="grey">tokenId</font> 的 NFT 目前授權給哪個帳戶操作
+- 編號為 <font color="grey">__tokenId__</font> 的 NFT 目前授權給哪個帳戶操作
 
 ### setApprovalForAll(<font color="grey">address operator, bool _approved</font>)
-- 賦予 / 取消 <font color="grey">operator</font> 帳戶授權，操作所有屬於 <font color="grey">呼叫合約帳戶</font> 的 NFT
-- <font color="grey">_approved</font> 控制賦予 / 取消授權
+- 賦予 / 取消 <font color="grey">__operator__</font> 帳戶授權，操作所有屬於 <font color="grey">__呼叫合約帳戶__</font> 的 NFT
+- <font color="grey">___approved__</font> 控制賦予 / 取消授權
 - 記錄 ApprovalForAll 事件
 
 ### isApprovedForAll(<font color="grey">owner, operator</font>) -> bool
-- 查詢 <font color="grey">operator</font> 帳戶是否有權限操作 <font color="grey">owner</font> 帳戶下的所有 NFT
+- 查詢 <font color="grey">__operator__</font> 帳戶是否有權限操作 <font color="grey">__owner__</font> 帳戶下的所有 NFT
 
 ### safeTransferFrom(<font color="grey">from, to, tokenId, bytes data</font>)
-- 從 <font color="grey">from</font> 帳戶將編號為 <font color="grey">tokenId</font> 的 NFT 轉移到 <font color="grey">to</font> 帳戶中
-- <font color="grey">data</font> 提供合約彈性，可以進行額外操作
+- 從 <font color="grey">__from__</font> 帳戶將編號為 <font color="grey">__tokenId__</font> 的 NFT 轉移到 <font color="grey">__to__</font> 帳戶中
+- <font color="grey">__data__</font> 提供合約彈性，可以進行額外操作
 - 記錄 Transfer 事件
 
 ___

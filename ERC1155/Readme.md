@@ -5,29 +5,29 @@ ___
 ## Functions
 
 ### balanceOf(<font color="grey">account, id</font>) -> uint256
-- <font color="grey">account</font> 帳戶中，擁有多少個類型為 <font color="grey">id</font> 的 token
+- <font color="grey">__account__</font> 帳戶中，擁有多少個類型為 <font color="grey">__id__</font> 的 token
 
 ### balanceOfBatch(<font color="grey">address[] accounts, uint256[] ids</font>) -> uint256[]
 - 一次查詢多個帳戶下的對應類型 token
-- <font color="grey">accounts</font> 與 <font color="grey">ids</font> 的陣列長度必須相同
+- <font color="grey">__accounts__</font> 與 <font color="grey">__ids__</font> 的陣列長度必須相同
 
 ### setApprovalForAll(<font color="grey">address operator, bool approved</font>)
-- 賦予 / 取消 <font color="grey">operator</font> 帳戶授權，操作所有屬於 <font color="grey">呼叫合約帳戶</font> 的 NFT
-- <font color="grey">approved</font> 控制賦予 / 取消授權
+- 賦予 / 取消 <font color="grey">__operator__</font> 帳戶授權，操作所有屬於 <font color="grey">__呼叫合約帳戶__</font> 的 NFT
+- <font color="grey">__approved__</font> 控制賦予 / 取消授權
 - 記錄 ApprovalForAll 事件
 
 ### isApprovedForAll(<font color="grey">account, operator</font>) -> bool
-- 查詢 <font color="grey">operator</font> 帳戶是否有權限操作 <font color="grey">account</font> 帳戶下的所有 NFT
+- 查詢 <font color="grey">__operator__</font> 帳戶是否有權限操作 <font color="grey">__account__</font> 帳戶下的所有 NFT
 
 ### safeTransferFrom(<font color="grey">from, to, id, amount, bytes data</font>)
-- 從 <font color="grey">from</font> 帳戶將類型為 <font color="grey">id</font> 的 token 轉移 <font color="grey">amount</font> 個到 <font color="grey">to</font> 帳戶中
-- <font color="grey">data</font> 提供合約彈性，可以進行額外操作
+- 從 <font color="grey">__from__</font> 帳戶將類型為 <font color="grey">__id__</font> 的 token 轉移 <font color="grey">__amount__</font> 個到 <font color="grey">__to__</font> 帳戶中
+- <font color="grey">__data__</font> 提供合約彈性，可以進行額外操作
 - 記錄 TransferSingle 事件
 
 ### safeBatchTransferFrom(<font color="grey">address from, address to, uint256[] ids, uint256[] amounts, bytes data</font>)
 - 一次轉移帳戶下多個對應類型 token
-- <font color="grey">ids</font> 與 <font color="grey">amounts</font> 的陣列長度必須相同
-- <font color="grey">data</font> 提供合約彈性，可以進行額外操作
+- <font color="grey">__ids__</font> 與 <font color="grey">__amounts__</font> 的陣列長度必須相同
+- <font color="grey">__data__</font> 提供合約彈性，可以進行額外操作
 - 記錄 TransferBatch 事件
 
 ___
